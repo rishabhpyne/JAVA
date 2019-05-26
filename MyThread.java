@@ -7,7 +7,7 @@ public class MyThread {
 		running = false;
 	}
 
-	Thread t7 = new Thread(new Runnable() {
+	Thread t = new Thread(new Runnable() {
 		public void run() {
 			while (running) {
 				System.out.println("run..");
@@ -21,9 +21,9 @@ public class MyThread {
 	});
 
 	public static void main(String[] args) {
-		Thread2 a = new Thread2();
+		MyThread a = new MyThread();
  
-		a.t7.start();
+		a.t.start();
 		System.out.println("press any key to stop");
 		Scanner sc = new Scanner(System.in);
 		System.out.println("you have pressed " + sc.next() + "\n now calling stopRunning()");
